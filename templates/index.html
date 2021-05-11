@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Analisis Sentiment Link youtube</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="padding:20px;">
+	<div class="box1" style="padding:10px; background-color:#ffe6e6; width:100%; height:100%; border-radius:20px;">
+		<a href="{{ url_for('main') }}">Form</a>
+		<div class="container">
+		  <h2>Analisis Sentiment Youtube</h2>
+		  <p>Hasil:</p>
+		</div>
+  
+		<div class="container">
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">URL Youtube :</li>
+		    {%for i in range(1, 6)%}
+		    <li class="list-group-item">Comment ke : {{i}}</li>
+		    <li class="list-group-item">Creator	   : {{creator[i]}}</li>
+		    <li class="list-group-item">Comment    : {{comment[i]}}</li>
+		    <li class="list-group-item">Mood       : {{mood[i]}}</li>
+		    {%endfor%}
+		  </ul>
+		</div>
+	</div>
+</body>
+</html>
