@@ -51,3 +51,6 @@ def main():
 
         return render_template('index.html', link = link, mood = mood, creator = creator, comment = comment)
     return render_template('form.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)
